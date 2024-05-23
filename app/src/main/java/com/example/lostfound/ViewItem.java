@@ -34,7 +34,11 @@ public class ViewItem extends AppCompatActivity {
 
         textViewName.setText("Name: " + name);
         textViewDescription.setText("Description: " + description);
-        textViewLocation.setText("Location: " + location);
+
+        String[] locationParts = location.split("\\?");
+        String locationName = locationParts[0];
+        textViewLocation.setText("Location: " + locationName);
+
         textViewPostType.setText("Post Type: " + postType);
         textViewPhone.setText("Phone: " + phone);
         textViewDate.setText("Date: " + date);
